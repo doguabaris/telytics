@@ -103,4 +103,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
 
 ## License
 
-This package released under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
