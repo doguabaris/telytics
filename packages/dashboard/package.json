@@ -1,6 +1,6 @@
 {
 	"name": "@solana-observe/dashboard",
-	"version": "0.1.0-alpha.1",
+	"version": "0.1.0-alpha.2",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
