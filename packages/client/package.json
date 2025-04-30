@@ -1,0 +1,27 @@
+{
+	"name": "@solana-observe/client",
+	"version": "0.1.0-alpha.1",
+	"description": "Client-side telemetry SDK for Solana dApps.",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"dev": "tsc -p tsconfig.json --watch",
+		"lint": "eslint src --ext .ts,.tsx",
+		"test": "vitest run"
+	},
+	"license": "MIT",
+	"author": {
+		"name": "Doğu Abaris",
+		"email": "abaris@null.net",
+		"url": "https://doguabaris.bio"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"typescript": "^5.3.0",
+		"vitest": "^1.2.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

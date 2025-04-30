@@ -1,0 +1,35 @@
+{
+	"name": "solana-observe",
+	"version": "0.1.0-alpha.2",
+	"description": "Monorepo for Solana Observe SDK, Collector, and Dashboard",
+	"scripts": {
+		"dev": "concurrently -n collector,dashboard -c magenta,cyan \"npm run dev --workspace=@solana-observe/collector\" \"npm run dev --workspace=@solana-observe/dashboard\"",
+		"lint": "eslint packages/**/src --ext .ts,.tsx",
+		"test": "npm run test --workspaces"
+	},
+	"keywords": [],
+	"author": {
+		"name": "Doğu Abaris",
+		"email": "abaris@null.net",
+		"url": "https://doguabaris.bio"
+	},
+	"license": "MIT",
+	"workspaces": [
+		"packages/*"
+	],
+	"devDependencies": {
+		"@eslint/js": "^9.25.1",
+		"@types/node": "^22.15.3",
+		"@typescript-eslint/eslint-plugin": "^8.31.1",
+		"@typescript-eslint/parser": "^8.31.1",
+		"@vitest/coverage-v8": "^3.1.2",
+		"@vitest/ui": "^3.1.2",
+		"concurrently": "9.1.2",
+		"eslint": "^9.25.1",
+		"eslint-config-prettier": "^10.1.2",
+		"globals": "^16.0.0",
+		"typescript": "^5.8.3",
+		"typescript-eslint": "^8.31.1",
+		"vitest": "^3.1.2"
+	}
+}
