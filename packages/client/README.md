@@ -1,11 +1,8 @@
 ## `@solana-observe/client`
 
-> Lightweight client-side telemetry SDK for Solana dApps.  
-> Easily track runtime errors and operational events, and send structured logs to your collector.
+Lightweight client-side telemetry SDK for Solana dApps. Easily track runtime errors and operational events, and send structured logs to your collector.
 
----
-
-### Features
+## Features
 
 - Minimal API: `initTelemetry()`, `trackError()`
 - Fully typed with TypeScript
@@ -13,17 +10,13 @@
 - Compatible with browser and server environments
 - Ideal for decentralized dApp telemetry
 
----
-
-### Installation
+## Installation
 
 ```bash
 npm install @solana-observe/client
 ```
 
----
-
-### Quick start
+## Quick start
 
 ```ts
 import {initTelemetry, trackError} from '@solana-observe/client';
@@ -42,11 +35,9 @@ try {
 }
 ```
 
----
+## API reference
 
-### API reference
-
-#### `initTelemetry(options: TelemetryOptions): void`
+### `initTelemetry(options: TelemetryOptions): void`
 
 Initializes the telemetry client.
 
@@ -56,15 +47,11 @@ Initializes the telemetry client.
 | `app`      | `string` | YES      | Your dApp's name                   |
 | `release`  | `string` | YES      | Version tag or commit ID           |
 
----
-
-#### `trackError(error: unknown, context?: Record<string, unknown>): void`
+### `trackError(error: unknown, context?: Record<string, unknown>): void`
 
 Captures an error and sends it to the collector.
 
----
-
-### Example log payload
+## Example log payload
 
 ```json
 {
@@ -79,8 +66,6 @@ Captures an error and sends it to the collector.
 }
 ```
 
----
-
 ## License
 
-This package released under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
