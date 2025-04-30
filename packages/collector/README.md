@@ -1,12 +1,8 @@
 ## `@solana-observe/collector`
 
-> Minimal telemetry ingestion API for Solana dApps.  
-> Receives structured logs from clients and writes them to a newline-delimited JSON (`.ndjson`) log
-> file.
+Minimal telemetry ingestion API for Solana dApps. Receives structured logs from clients and writes them to a newline-delimited JSON (`.ndjson`) log file.
 
----
-
-### Features
+## Features
 
 - Simple Express.js API (`POST /api/ingest`)
 - Accepts structured telemetry events from clients
@@ -14,9 +10,7 @@
 - Type-safe with full `LogPayload` validation
 - Suitable for local development, production tailing, or log forwarding
 
----
-
-### Installation
+## Installation
 
 ```bash
 npm install
@@ -29,11 +23,9 @@ The service starts on:
 http://localhost:3000
 ```
 
----
+## API endpoint
 
-### API endpoint
-
-#### `POST /api/ingest`
+### `POST /api/ingest`
 
 Receives a structured log payload from the client.
 
@@ -61,9 +53,7 @@ Receives a structured log payload from the client.
 400 Bad Request
 ```
 
----
-
-### Log storage
+## Log storage
 
 Logs are appended to:
 
@@ -93,19 +83,15 @@ Each line is a valid JSON object, separated by newlines:
 }
 ```
 
----
-
-### Development
+## Development
 
 ```bash
 npm run dev --workspace=@solana-observe/collector
 ```
-
+> [!IMPORTANT]
 > Uses `ts-node-dev` for live reloading.
 
----
-
-### Example use
+## Example use
 
 Paired with [`@solana-observe/client`](../client):
 
@@ -118,8 +104,6 @@ trackError(new Error("Something went wrong"), {
 
 Collector will write that as a line in `events.ndjson`.
 
----
-
 ## License
 
-This package is released under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
