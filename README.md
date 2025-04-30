@@ -6,8 +6,6 @@ Solana Observe is an open-source lightweight, privacy-respecting telemetry syste
 
 The project offers a minimal Software Development Kit (SDK) to capture runtime errors, transaction events, and user interactions directly from dApps. Optional components include a simple ingestion API server for receiving telemetry data, and a dashboard for visualizing collected logs.
 
----
-
 ## Monorepo structure
 
 This repository is an [npm workspace](https://docs.npmjs.com/cli/v10/using-npm/workspaces)-based monorepo that includes three main packages:
@@ -18,8 +16,6 @@ packages/
 ├── collector  # Minimal ingestion API server (Express-based)
 └── dashboard  # Next.js 15 UI for log visualization
 ```
-
----
 
 ## Getting started
 
@@ -47,8 +43,6 @@ npm run dev --workspace=@solana-observe/dashboard
 
 > The `client` SDK is used by your dApp and does not run as a standalone process.
 
----
-
 ## Packages
 
 ### [`@solana-observe/client`](./packages/client)
@@ -68,8 +62,6 @@ initTelemetry({
 trackError(new Error("Something broke"), {route: "/stake"})
 ```
 
----
-
 ### [`@solana-observe/collector`](./packages/collector)
 
 - Lightweight Express API to receive telemetry data
@@ -82,15 +74,11 @@ Endpoint:
 POST /api/ingest
 ```
 
----
-
 ### [`@solana-observe/dashboard`](./packages/dashboard)
 
 - Built with Next.js 15 + Tailwind + ShadCN
 - Server-side rendering of telemetry data (parsed from `.ndjson`)
 - Uses `@tanstack/react-table` and `recharts` for display
-
----
 
 ## Testing
 
@@ -107,7 +95,9 @@ npm run test --workspace=@solana-observe/client
 npm run test --workspace=@solana-observe/collector
 ```
 
----
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
 
 ## License
 
