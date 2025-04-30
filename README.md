@@ -16,7 +16,7 @@ This repository is an [npm workspace](https://docs.npmjs.com/cli/v10/using-npm/w
 packages/
 ├── client     # Lightweight telemetry SDK (browser & server)
 ├── collector  # Minimal ingestion API server (Express-based)
-└── dashboard  # Next.js 14 UI for log visualization
+└── dashboard  # Next.js 15 UI for log visualization
 ```
 
 ---
@@ -86,7 +86,7 @@ POST /api/ingest
 
 ### [`@solana-observe/dashboard`](./packages/dashboard)
 
-- Built with Next.js 14 + Tailwind + ShadCN
+- Built with Next.js 15 + Tailwind + ShadCN
 - Server-side rendering of telemetry data (parsed from `.ndjson`)
 - Uses `@tanstack/react-table` and `recharts` for display
 
