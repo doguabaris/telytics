@@ -12,10 +12,19 @@
 		"strict": true,
 		"types": [
 			"vitest/globals"
-		]
+		],
+		"declaration": true,
+		"declarationMap": true,
+		"emitDeclarationOnly": false,
+		"outDir": "dist",
+		"rootDir": "src"
 	},
 	"include": [
 		"src",
 		"tests"
+	],
+	"exclude": [
+		"dist",
+		"node_modules"
 	]
 }
