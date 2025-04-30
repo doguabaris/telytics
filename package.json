@@ -1,6 +1,5 @@
 {
 	"name": "solana-observe",
-	"private": true,
 	"description": "Monorepo for Solana Observe SDK, Collector, and Dashboard",
 	"scripts": {
 		"dev": "concurrently -n collector,dashboard -c magenta,cyan \"npm run dev --workspace=@solana-observe/collector\" \"npm run dev --workspace=@solana-observe/dashboard\"",
