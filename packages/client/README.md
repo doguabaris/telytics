@@ -37,19 +37,75 @@ try {
 
 ## API reference
 
-### `initTelemetry(options: TelemetryOptions): void`
+### Initialize the telemetry client
 
-Initializes the telemetry client.
+Sets up the internal client with endpoint, app name, and release version.
+
+```ts
+initTelemetry(options: TelemetryOptions): void
+```
 
 | Option     | Type     | Required | Description                        |
 |------------|----------|----------|------------------------------------|
-| `endpoint` | `string` | YES      | Full URL of the collector endpoint |
-| `app`      | `string` | YES      | Your dApp's name                   |
-| `release`  | `string` | YES      | Version tag or commit ID           |
+| `endpoint` | `string` | Yes      | Full URL of the collector endpoint |
+| `app`      | `string` | Yes      | Your dApp's name                   |
+| `release`  | `string` | Yes      | Version tag or commit ID           |
 
-### `trackError(error: unknown, context?: Record<string, unknown>): void`
+**Example:**
 
-Captures an error and sends it to the collector.
+```ts
+initTelemetry({
+	endpoint: 'https://observe.example.dev/api/ingest',
+	app: 'nft-hub',
+	release: 'v1.0.0'
+});
+```
+
+### Track an error
+
+Logs a serialized error to the telemetry collector.
+
+```ts
+trackError(error: unknown, context?: Record<string, unknown>): Promise<void>
+```
+
+**Example:**
+
+```ts
+trackError(new Error('Something failed'), { route: '/dashboard' });
+```
+
+### Log an informational message
+
+Captures a non-critical event or user action.
+
+```ts
+trackInfo(message: string, context?: Record<string, unknown>): Promise<void>
+```
+
+**Example:**
+
+```ts
+trackInfo('User opened settings panel', { section: 'privacy' });
+```
+
+### Record a transaction event
+
+Sends transaction-related telemetry (e.g. swaps, staking).
+
+```ts
+trackTransaction(message: string, context?: Record<string, unknown>): Promise<void>
+```
+
+**Example:**
+
+```ts
+trackTransaction('User staked tokens', {
+	txId: '0xabc123',
+	amount: 42,
+	token: 'SOL'
+});
+```
 
 ## Example log payload
 
