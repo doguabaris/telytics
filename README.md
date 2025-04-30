@@ -1,3 +1,5 @@
+![Image](https://github.com/user-attachments/assets/738808a4-5323-4cfb-b85a-dcf2792e7169)
+
 # Solana Observe
 
 > Originally built for the **Solana Buildstation Belgrade @ Breakout Hackathon**, hosted by Superteam Balkan and Solana Foundation.
