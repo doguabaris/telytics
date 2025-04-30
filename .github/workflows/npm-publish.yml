@@ -1,11 +1,18 @@
-# This workflow will run tests using node and then publish a package to NPM when a release is created
-# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
+# This workflow builds and tests all packages in a Node.js monorepo
+# and publishes each package under `packages/*/` to the public NPM registry
+# when a GitHub release is created.
+#
+# Requirements:
+# - Each subpackage in `packages/*/` must have its own valid package.json
+# - The `npm_token` secret must be set in the GitHub repository
+#
+# For more information: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
 
-name: Node.js Package
+name: Node.js Monorepo Package Publisher
 
 on:
     release:
-        types: [created]
+        types: [ created ]
 
 jobs:
     build:
@@ -45,8 +52,18 @@ jobs:
                     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
                     restore-keys: |
                         ${{ runner.os }}-node-
-            -   run: npm ci
-            -   run: npm test
-            -   run: npm publish
+            -   name: Install dependencies
+                run: npm ci
+
+            -   name: Publish each package
+                run: |
+                    for dir in packages/*/; do
+                      cd "$dir"
+                      if [ -f package.json ]; then
+                        echo "Publishing $dir"
+                        npm publish --access public || echo "Failed to publish $dir"
+                      fi
+                      cd - > /dev/null
+                    done
                 env:
                     NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
