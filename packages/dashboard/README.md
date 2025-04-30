@@ -1,15 +1,14 @@
 ## `@solana-observe/dashboard`
 
 > Log visualization interface for Solana dApps.  
-> Built with Next.js 14, this dashboard renders telemetry logs collected by the [
-`@solana-observe/collector`](../collector) in real time.
+> Built with Next.js 15, this dashboard renders telemetry logs collected by the [`@solana-observe/collector`](../collector) in real time.
 
 ---
 
 ### Features
 
 - Log explorer for error/info/transaction events
-- Built with Next.js 14 App Router and Server Components
+- Built with Next.js 15 App Router and Server Components
 - Uses `@tanstack/react-table` and `recharts` for interactive display
 - Parses `.ndjson` logs written by the collector
 - Fully styled with Tailwind CSS and ShadCN components
