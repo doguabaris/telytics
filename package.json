@@ -1,6 +1,6 @@
 {
 	"name": "solana-observe",
-	"version": "0.1.0-alpha.3",
+	"private": true,
 	"description": "Monorepo for Solana Observe SDK, Collector, and Dashboard",
 	"scripts": {
 		"dev": "concurrently -n collector,dashboard -c magenta,cyan \"npm run dev --workspace=@solana-observe/collector\" \"npm run dev --workspace=@solana-observe/dashboard\"",
@@ -15,7 +15,9 @@
 	},
 	"license": "MIT",
 	"workspaces": [
-		"packages/*"
+		"packages/client",
+		"packages/collector",
+		"packages/dashboard"
 	],
 	"devDependencies": {
 		"@eslint/js": "^9.25.1",
