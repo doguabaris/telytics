@@ -4,11 +4,10 @@ Lightweight client-side telemetry SDK for Solana dApps. Easily track runtime err
 
 ## Features
 
-- Minimal API: `initTelemetry()`, `trackError()`
-- Fully typed with TypeScript
-- Fire-and-forget error tracking
+- Minimal API: `initTelemetry`, `trackError`, `trackInfo`, `trackTransaction`
+- Fire-and-forget logging for errors, info, and transactions
 - Compatible with browser and server environments
-- Ideal for decentralized dApp telemetry
+- Suitable for decentralized dApp telemetry with privacy in mind
 
 ## Installation
 
