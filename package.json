@@ -1,6 +1,6 @@
 {
 	"name": "solana-observe",
-	"version": "0.1.0-alpha.2",
+	"version": "0.1.0-alpha.3",
 	"description": "Monorepo for Solana Observe SDK, Collector, and Dashboard",
 	"scripts": {
 		"dev": "concurrently -n collector,dashboard -c magenta,cyan \"npm run dev --workspace=@solana-observe/collector\" \"npm run dev --workspace=@solana-observe/dashboard\"",
