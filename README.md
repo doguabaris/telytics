@@ -101,7 +101,7 @@ npm run test --workspace=@solana-observe/collector
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
+See the [contributing guidelines](CONTRIBUTING.md) for more information.
 
 ## License
 
