@@ -2,6 +2,7 @@
 
 # Solana Observe
 
+> [!NOTE]  
 > Originally built for the **Solana Buildstation Belgrade @ Breakout Hackathon**, hosted by Superteam Balkan and Solana Foundation.
 
 Solana Observe is an open-source lightweight, privacy-respecting telemetry system designed for decentralized applications (dApps). It addresses the need for a telemetry solution tailored to dApps, as existing observability tools are often complex and not well-suited for browser-based or client-side environments typical in this context.
@@ -43,6 +44,7 @@ npm run dev --workspace=@solana-observe/collector
 npm run dev --workspace=@solana-observe/dashboard
 ```
 
+> [!IMPORTANT] 
 > The `client` SDK is used by your dApp and does not run as a standalone process.
 
 ## Packages
