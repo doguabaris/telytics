@@ -31,6 +31,7 @@
  */
 
 import path from 'path';
+import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
 import {ingestHandler} from './routes/ingest';
@@ -43,6 +44,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
+app.use(cors());
 
 app.get('/', (req, res) => {
 	res.status(200).send('Solana Observe Collector is running.\nUse POST /api/ingest to submit telemetry.');
