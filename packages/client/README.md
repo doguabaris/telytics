@@ -1,6 +1,6 @@
-## `@solana-observe/client`
+## `@telytics/client`
 
-Lightweight client-side telemetry SDK for Solana dApps. Easily track runtime errors and operational events, and send structured logs to your collector.
+Lightweight client-side telemetry SDK for dApps. Easily track runtime errors and operational events, and send structured logs to your collector.
 
 ## Features
 
@@ -12,13 +12,13 @@ Lightweight client-side telemetry SDK for Solana dApps. Easily track runtime err
 ## Installation
 
 ```bash
-npm install @solana-observe/client
+npm install @telytics/client
 ```
 
 ## Quick start
 
 ```ts
-import {initTelemetry, trackError} from '@solana-observe/client';
+import {initTelemetry, trackError} from '@telytics/client';
 
 initTelemetry({
     endpoint: 'https://observe.myapp.dev/api/ingest',
