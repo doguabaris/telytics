@@ -1,6 +1,6 @@
 /**
  * @file index.ts
- * @description Public entrypoint for the Solana Observe telemetry SDK.
+ * @description Public entrypoint for the Telytics SDK.
  *
  * This module exposes the primary API functions:
  *  - `initTelemetry()` - to initialize the telemetry client
@@ -8,11 +8,11 @@
  *  - `trackInfo()` - to log informational events
  *  - `trackTransaction()` - to report transaction-related activity
  *
- * Designed for use in Solana-based dApps and web front-ends.
+ * Designed for use in dApps and web front-ends.
  *
  * @example
  * ```ts
- * import { initTelemetry, trackError, trackInfo, trackTransaction } from '@solana-observe/client';
+ * import { initTelemetry, trackError, trackInfo, trackTransaction } from '@telytics/client';
  *
  * initTelemetry({
  *   endpoint: 'https://observe.myapp.dev/api/ingest',

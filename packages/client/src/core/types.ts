@@ -1,6 +1,6 @@
 /**
  * @file types.ts
- * @description Internal types used by the Solana Observe telemetry client.
+ * @description Internal types used by the Telytics client.
  *
  * These types define the configuration and structure of telemetry payloads
  * sent to the remote logging endpoint.

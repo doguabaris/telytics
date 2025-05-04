@@ -35,7 +35,7 @@ export function AppSidebar({...props}: React.ComponentProps<typeof Sidebar>) {
                         >
                             <a href="#">
                                 <ArrowUpCircleIcon className="h-5 w-5"/>
-                                <span className="text-base font-semibold">Solana Observe</span>
+                                <span className="text-base font-semibold">Telytics</span>
                             </a>
                         </SidebarMenuButton>
                     </SidebarMenuItem>

@@ -1,11 +1,11 @@
 # Contributing
 
-Thank you for considering contributing to **solana-observe**! Whether you’re fixing bugs, adding features,
+Thank you for considering contributing to **Telytics**! Whether you’re fixing bugs, adding features,
 improving documentation, or just giving feedback, it’s all welcome.
 
 ## How to Contribute
 
-- Open an [issue](https://github.com/doguabaris/solana-observe/issues) and describe what’s going on.
+- Open an [issue](https://github.com/doguabaris/telytics/issues) and describe what’s going on.
 
 - Fork the repo → create a new branch → commit changes → open a PR.
   Keep commits focused and descriptive.

@@ -14,7 +14,7 @@
  *
  * @example
  * ```ts
- * import { initTelemetry, trackError } from '@solana-observe/client';
+ * import { initTelemetry, trackError } from '@telytics/client';
  *
  * initTelemetry({
  *   endpoint: 'https://observe.myapp.dev/api/ingest',

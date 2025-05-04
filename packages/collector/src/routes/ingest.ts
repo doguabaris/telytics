@@ -9,7 +9,7 @@
  * Otherwise, a 400 Bad Request is returned.
  *
  * This endpoint is expected to be called from:
- *  - @solana-observe/client via `trackError`, `trackInfo`, or `trackTransaction`
+ *  - @telytics/client via `trackError`, `trackInfo`, or `trackTransaction`
  *  - Internal tooling or backend services emitting structured logs
  *
  * @example

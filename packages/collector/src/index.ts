@@ -1,6 +1,6 @@
 /**
  * @file index.ts
- * @description Entry point for the Solana Observe collector service.
+ * @description Entry point for the Telytics collector service.
  *
  * This lightweight HTTP server receives telemetry logs via POST requests
  * and processes them using the `ingestHandler`. Logs may be printed to
@@ -47,7 +47,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
-	res.status(200).send('Solana Observe Collector is running.\nUse POST /api/ingest to submit telemetry.');
+	res.status(200).send('Telytics Collector is running.\nUse POST /api/ingest to submit telemetry.');
 });
 
 /**

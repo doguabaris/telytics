@@ -1,7 +1,7 @@
 {
-	"name": "@solana-observe/collector",
-	"version": "0.1.0-alpha.4",
-	"description": "Collector service for receiving telemetry logs from Solana dApps.",
+	"name": "@telytics/collector",
+	"version": "0.1.0-alpha.1",
+	"description": "Collector service for receiving telemetry logs from dApps.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {

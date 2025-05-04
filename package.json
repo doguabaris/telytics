@@ -1,8 +1,8 @@
 {
-	"name": "solana-observe",
-	"description": "Monorepo for Solana Observe SDK, Collector, and Dashboard",
+	"name": "telytics",
+	"description": "Monorepo for Telytics SDK, Collector, and Dashboard",
 	"scripts": {
-		"dev": "concurrently -n collector,dashboard -c magenta,cyan \"npm run dev --workspace=@solana-observe/collector\" \"npm run dev --workspace=@solana-observe/dashboard\"",
+		"dev": "concurrently -n collector,dashboard -c magenta,cyan \"npm run dev --workspace=@telytics/collector\" \"npm run dev --workspace=@telytics/dashboard\"",
 		"lint": "eslint packages/**/src --ext .ts,.tsx",
 		"test": "npm run test --workspaces"
 	},
