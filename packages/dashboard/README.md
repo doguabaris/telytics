@@ -1,6 +1,6 @@
-## `@solana-observe/dashboard`
+## `@telytics/dashboard`
 
-Log visualization interface for Solana dApps. Built with Next.js 15, this dashboard renders telemetry logs collected by the [`@solana-observe/collector`](../collector) in real time.
+Log visualization interface for dApps. Built with Next.js 15, this dashboard renders telemetry logs collected by the [`@telytics/collector`](../collector) in real time.
 
 ## Features
 
@@ -15,7 +15,7 @@ Log visualization interface for Solana dApps. Built with Next.js 15, this dashbo
 
 ```bash
 npm install
-npm run dev --workspace=@solana-observe/dashboard
+npm run dev --workspace=@telytics/dashboard
 ```
 
 The dashboard starts on:
@@ -68,7 +68,7 @@ Each line is parsed as a structured JSON log entry and rendered in a table.
 ## Development
 
 ```bash
-npm run dev --workspace=@solana-observe/dashboard
+npm run dev --workspace=@telytics/dashboard
 ```
 
 Dashboard will be available at [http://localhost:3001](http://localhost:3001)
