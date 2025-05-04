@@ -1,6 +1,6 @@
-## `@solana-observe/collector`
+## `@telytics/collector`
 
-Minimal telemetry ingestion API for Solana dApps. Receives structured logs from clients and writes them to a newline-delimited JSON (`.ndjson`) log file.
+Minimal telemetry ingestion API for dApps. Receives structured logs from clients and writes them to a newline-delimited JSON (`.ndjson`) log file.
 
 ## Features
 
@@ -14,7 +14,7 @@ Minimal telemetry ingestion API for Solana dApps. Receives structured logs from 
 
 ```bash
 npm install
-npm run dev --workspace=@solana-observe/collector
+npm run dev --workspace=@telytics/collector
 ```
 
 The service starts on:
@@ -86,14 +86,14 @@ Each line is a valid JSON object, separated by newlines:
 ## Development
 
 ```bash
-npm run dev --workspace=@solana-observe/collector
+npm run dev --workspace=@telytics/collector
 ```
 > [!IMPORTANT]
 > Uses `ts-node-dev` for live reloading.
 
 ## Example use
 
-Paired with [`@solana-observe/client`](../client):
+Paired with [`@telytics/client`](../client):
 
 ```ts
 trackError(new Error("Something went wrong"), {
