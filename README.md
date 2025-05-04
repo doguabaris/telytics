@@ -1,11 +1,11 @@
 ![Image](https://github.com/user-attachments/assets/738808a4-5323-4cfb-b85a-dcf2792e7169)
 
-# Solana Observe
+# Telytics
 
 > [!NOTE]  
 > Originally built for the **Solana Buildstation Belgrade @ Breakout Hackathon**, hosted by Superteam Balkan and Solana Foundation.
 
-Solana Observe is an open-source lightweight, privacy-respecting telemetry system designed for decentralized applications (dApps). It addresses the need for a telemetry solution tailored to dApps, as existing observability tools are often complex and not well-suited for browser-based or client-side environments typical in this context.
+Telytics is an open-source lightweight, privacy-respecting telemetry system designed for decentralized applications (dApps). It addresses the need for a telemetry solution tailored to dApps, as existing observability tools are often complex and not well-suited for browser-based or client-side environments typical in this context.
 
 The project offers a minimal Software Development Kit (SDK) to capture runtime errors, transaction events, and user interactions directly from dApps. Optional components include a simple ingestion API server for receiving telemetry data, and a dashboard for visualizing collected logs.
 
@@ -38,10 +38,10 @@ In separate terminals:
 
 ```bash
 # Collector API (http://localhost:3000)
-npm run dev --workspace=@solana-observe/collector
+npm run dev --workspace=@telytics/collector
 
 # Dashboard UI (http://localhost:3001)
-npm run dev --workspace=@solana-observe/dashboard
+npm run dev --workspace=@telytics/dashboard
 ```
 
 > [!IMPORTANT] 
@@ -49,13 +49,13 @@ npm run dev --workspace=@solana-observe/dashboard
 
 ## Packages
 
-### [`@solana-observe/client`](./packages/client)
+### [`@telytics/client`](./packages/client)
 
 - Type-safe SDK to report telemetry events (`error`, `info`, `transaction`)
 - Framework-agnostic (can be used in front-end, backend, or edge runtimes)
 
 ```ts
-import {initTelemetry, trackError} from "@solana-observe/client"
+import {initTelemetry, trackError} from "@telytics/client"
 
 initTelemetry({
     endpoint: "http://localhost:3000/api/ingest",
@@ -66,7 +66,7 @@ initTelemetry({
 trackError(new Error("Something broke"), {route: "/stake"})
 ```
 
-### [`@solana-observe/collector`](./packages/collector)
+### [`@telytics/collector`](./packages/collector)
 
 - Lightweight Express API to receive telemetry data
 - Writes logs to `.ndjson` file (append-only format)
@@ -78,7 +78,7 @@ Endpoint:
 POST /api/ingest
 ```
 
-### [`@solana-observe/dashboard`](./packages/dashboard)
+### [`@telytics/dashboard`](./packages/dashboard)
 
 - Built with Next.js 15 + Tailwind + ShadCN
 - Server-side rendering of telemetry data (parsed from `.ndjson`)
@@ -95,8 +95,8 @@ npm test
 Or per package:
 
 ```bash
-npm run test --workspace=@solana-observe/client
-npm run test --workspace=@solana-observe/collector
+npm run test --workspace=@telytics/client
+npm run test --workspace=@telytics/collector
 ```
 
 ## Contributing
