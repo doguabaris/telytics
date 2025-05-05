@@ -3,9 +3,22 @@
 	"version": "0.1.0-alpha.1",
 	"description": "Client-side telemetry SDK for dApps.",
 	"main": "dist/index.js",
+	"module": "dist/index.js",
 	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"require": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		},
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"build": "tsc -p tsconfig.json",
+		"prepare": "npm run build",
 		"dev": "tsc -p tsconfig.json --watch",
 		"lint": "eslint src --ext .ts,.tsx",
 		"test": "vitest run"
