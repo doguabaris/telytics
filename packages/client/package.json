@@ -1,6 +1,6 @@
 {
 	"name": "@telytics/client",
-	"version": "0.1.0-alpha.1",
+	"version": "0.1.0-alpha.2",
 	"description": "Client-side telemetry SDK for dApps.",
 	"main": "dist/index.js",
 	"module": "dist/index.js",
