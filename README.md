@@ -3,7 +3,7 @@
 # Telytics
 
 > [!NOTE]  
-> Originally built for the **Solana Buildstation Belgrade @ Breakout Hackathon**, hosted by Superteam Balkan and Solana Foundation.
+> Originally built for the **Solana Buildstation Belgrade @ Breakout Hackathon**, hosted by Superteam Balkan.
 
 Telytics is an open-source lightweight, privacy-respecting telemetry system designed for decentralized applications (dApps). It addresses the need for a telemetry solution tailored to dApps, as existing observability tools are often complex and not well-suited for browser-based or client-side environments typical in this context.
 
